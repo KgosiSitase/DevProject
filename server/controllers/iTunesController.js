@@ -18,7 +18,7 @@ exports.searchiTunes = async (req, res) => {
     const data = await response.json();
 
     // Map the API results to extract relevant information about each item
-    // Specifically, we're interested in the album/track name, artist name, album cover URL, and release date
+    // Specifically,interested in the album/track name, artist name, album cover URL, and release date
     const albums = data.results.map((item) => ({
       albumName: item.collectionName || item.trackName, 
       artistName: item.artistName, 
